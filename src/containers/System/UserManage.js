@@ -33,6 +33,9 @@ class UserManage extends Component {
         return (
             <div className="users-container">
                 <div className='title text-center'>Manage users with admin:</div>
+                <div className='mx1'>
+                    <button className='btn btn-primary px-3'> <i className='fas fa-plus'></i>  Add new user</button>
+                </div>
                 <div className='user-table mt-3 mx-1'>
                     <table id="customers">
                         <tr>
