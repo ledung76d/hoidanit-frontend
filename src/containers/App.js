@@ -16,9 +16,15 @@ import Login from './Auth/Login';
 
 import Header from './Header/Header';
 import System from '../routes/System';
-
+import Homepage from './Homepage/Homepage.js'
+import About from './About/About'
+// import Layout from '../components/Layout';
+import CustomScrollbars from '../components/CustomScrollbars';
 import { CustomToastCloseButton } from '../components/CustomToast';
-import ConfirmModal from '../components/ConfirmModal';
+import Signup from './Signup/Signup';
+import Contact from './Contact/Contact';
+import Product from './Product/Product';
+// import ConfirmModal from '../components/ConfirmModal';
 
 class App extends Component {
 
@@ -45,16 +51,25 @@ class App extends Component {
             <Fragment>
                 <Router history={history}>
                     <div className="main-container">
-                        <ConfirmModal />
+                        {/* <ConfirmModal /> */}
                         {this.props.isLoggedIn && <Header />}
 
-                        <span className="content-container">
-                            <Switch>
-                                <Route path={path.HOME} exact component={(Home)} />
-                                <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                            </Switch>
-                        </span>
+                        <div className="content-container">
+                            <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
+                                <Switch>
+                                    <Route path={path.HOME} exact component={(Home)} />
+                                    <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
+                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                    <Route path={path.HOMEPAGE} component={Homepage} />
+                                    <Route path={path.ABOUT} component={About} />
+                                    <Route path={path.SIGNUP} component={Signup} />
+                                    <Route path={path.CONTACT} component={Contact} />
+                                    <Route path={path.PRODUCT} component={Product} />
+                                    {/* <Route path={path.HOMEPAGE} component={Homepage} />
+                                    <Route path={path.HOMEPAGE} component={Homepage} /> */}
+                                </Switch>
+                            </CustomScrollbars>
+                        </div>
 
                         <ToastContainer
                             className="toast-container" toastClassName="toast-item" bodyClassName="toast-item-body"

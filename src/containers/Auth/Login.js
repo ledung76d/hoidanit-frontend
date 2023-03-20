@@ -7,6 +7,11 @@ import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
 import { handleLoginApi } from '../../services/userService';
+import Meta from '../../components/Meta'
+import HomeHeader from '../Homepage/HomeHeader';
+import Footer from '../Footer/Footer';
+import { NavLink, Link } from 'react-router-dom'
+
 
 class Login extends Component {
     constructor(props) {
@@ -69,57 +74,71 @@ class Login extends Component {
     render() {
 
         return (
-            <div className='login-background'>
-                <div className='login-container'>
-                    <div className='login-content row'>
-                        <div className='text-login col-12'>
-                            Login
-                        </div>
-                        <div className='col-12 form-group login-input'>
-                            <label>User name:</label>
-                            <input
-                                type='text'
-                                // value={this.state.username}
-                                onChange={(event) => {
-                                    this.handleOnChangeUsername(event)
-                                }}
-                                className='form-control'
-                                placeholder='Enter your user name'
-                            />
-                        </div>
-                        <div className='col-12 form-group login-input'>
-                            <label>Password:</label>
-                            <div className='custom-input-password'>
-                                <input type={this.state.isShowPassword ? 'text' : 'password'}
-                                    // value={this.state.password}
-                                    className='form-control'
-                                    onChange={(event) => {
-                                        this.handleOnChangePassword(event)
-                                    }}
-                                    placeholder='Enter your password' />
-                                <span onClick={() => {
-                                    this.handlerShowHidePassword()
-                                }}>{this.state.isShowPassword ? <BsFillEyeFill className='eyeopen' /> : <BsFillEyeSlashFill className='eyeopen' />}</span>
-                            </div>
-                            <div className='col-12' style={{ color: 'red' }}>
-                                {this.state.errMessage}
-                            </div>
-                        </div>
-                        <div className='col-12'><button className='btn-login' onClick={() => this.handleLogin()}>Login</button></div>
-                        <div className='col-12'>
-                            <span className='forgot-password'>Forgot your password?</span>
+            <>
+                <HomeHeader />
+                <Meta title={"Đăng nhập"} />
+                <div className='login-background'>
+                    <div className='login-container'>
+                        <div className='login-content row'>
 
-                        </div>
-                        <div className='col-12 text-center mt-3'>
-                            <span >Or login with:</span>
-                        </div>
-                        <div className='col-12 social-login'>
-                            <BsFacebook className='fs-4 facebook' />
-                            <BsGoogle className='fs-4 google' />
+                            <div className='text-login col-12'>
+                                Login
+                            </div>
+                            <div className='col-12 form-group login-input'>
+                                <label>User name:</label>
+                                <input
+                                    type='text'
+                                    // value={this.state.username}
+                                    onChange={(event) => {
+                                        this.handleOnChangeUsername(event)
+                                    }}
+                                    className='form-control'
+                                    placeholder='Enter your user name'
+                                />
+                            </div>
+                            <div className='col-12 form-group login-input'>
+                                <label>Password:</label>
+                                <div className='custom-input-password'>
+                                    <input type={this.state.isShowPassword ? 'text' : 'password'}
+                                        // value={this.state.password}
+                                        className='form-control'
+                                        onChange={(event) => {
+                                            this.handleOnChangePassword(event)
+                                        }}
+                                        placeholder='Enter your password' />
+                                    <span onClick={() => {
+                                        this.handlerShowHidePassword()
+                                    }}>{this.state.isShowPassword ? <BsFillEyeFill className='eyeopen' /> : <BsFillEyeSlashFill className='eyeopen' />}</span>
+                                </div>
+                                <div className='col-12' style={{ color: 'red' }}>
+                                    {this.state.errMessage}
+                                </div>
+                            </div>
+                            <div className='col-12'><button className='btn-login' onClick={() => this.handleLogin()}>Login</button></div>
+                            <div className='col-12'>
+                                <Link to="/forgotpassword" className='col-12 text-center mt-3 text-dark'>Quên mật khẩu?</Link>
+
+                            </div>
+                            <div className='col-12 text-center mt-3'>
+                                <span >Bạn chưa có tài khoản?</span>
+                                <br />
+                                <Link to="/signup" className="button signup">
+                                    Đăng ký ngay
+                                </Link>
+                            </div>
+                            {/* <div className='col-12 social-login'>
+                                <BsFacebook className='fs-4 facebook' />
+                                <BsGoogle className='fs-4 google' />
+                                <Link to="/signup">
+                                    Đăng ký
+                                </Link>
+                            </div> */}
                         </div>
                     </div>
                 </div>
-            </div>
+                <Footer />
+            </>
+
         )
     }
 }
