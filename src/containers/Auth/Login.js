@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
-import { BsFacebook, BsGoogle, BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
+import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
 // import * as actions from "../store/actions";
 import * as actions from "../../store/actions";
 import './Login.scss';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import { handleLoginApi } from '../../services/userService';
 import Meta from '../../components/Meta'
 import HomeHeader from '../Homepage/HomeHeader';
 import Footer from '../Footer/Footer';
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 class Login extends Component {

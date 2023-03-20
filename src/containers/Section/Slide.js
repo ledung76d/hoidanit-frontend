@@ -112,11 +112,59 @@ class Slide extends Component {
                         </div>
                     </div>
                 </section>
+                <section className='home-wrapper-1 py-5'>
+                    <div className='container-xxl'>
+                        <div className='row'>
+                            <div className='col-6'>
+                                <div className='main-banner position-relative'>
+                                    <h3>Trải qua 10 năm kinh doanh và phát triển. VT mobile tự hào là doanh nghiệp uy tín được đông đảo khách hàng tin tưởng mỗi khi mua sắm điện thoại.
+                                        Những thành tựu của VT mobile đã đạt được cho đến nay có thể nói là hết sức đang thuyết phục như:
+                                        top 3 cửa hàng điện thoại uy tín nhất Việt Nam từ năm 2013-2023, được Apple công nhận là đại lý ủy quyền của Apple tại Việt Nam. Kỷ niệm chương của bô Thông tin và truyền thông vì những dóng góp cho xã hội, top 5 cửa hàng được yêu thích nhất do người dùng bình chọn năm 2022,...</h3>
+                                </div>
+                            </div>
+                            <div className='col-6'>
+                                <div className='d-flex flex-wrap gap-10 justify-content-between align-items-center'>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://quaviet365.vn/Uploads/origin/20220803/mua-ky-niem-chuong-1-20220803222122059.jpg'
+                                            className='img-fluid rounded-3 '
+                                            alt='main banner'
+                                        />
+                                    </div>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://mainguyen.sgp1.digitaloceanspaces.com/11576/Apple_Reseller_Logo.jpg'
+                                            className='img-fluid rounded-3  '
+                                            alt='main banner'
+                                        />
+                                    </div>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://hungthinhcorp.com.vn//media/ftp/bang-khen-vi-co-nhieu-dong-gop-cho-the-thao-nuoc-nha-1.png'
+                                            className='img-fluid rounded-3 '
+                                            alt='main banner'
+                                        />
+                                    </div>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://chinhnhan.vn/uploads/hinh-anh-bai/2019-E-Certificate-Partners-Gold-Mobile-Reseller-Chinh%20nhan-min.jpg'
+                                            className='img-fluid rounded-3'
+                                            alt='main banner'
+                                        />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section className='home-wrapper-2 py-5'>
                     <div className='container-xxl'>
                         <div className='row'>
                             <div className='col-12'>
+
                                 <div className='servies d-flex align-items-center justify-content-between'>
+
                                     <div className="d-flex align-items-center gap-15">
                                         <img src={service} alt='services' />
                                         <div>

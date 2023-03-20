@@ -60,7 +60,6 @@ class HomeHeader extends Component {
                                     </div>
                                     <div>
                                         <Link to="/cart" className='d-flex align-items-center gap-10 text-white'>
-                                            {/* <img src='/images/cart.svg' alt='cart' /> */}
                                             <BsFillCartDashFill className=' d-flex align-items-center gap-10 text-white' style={{ width: "50px", height: "50px" }} />
 
                                             <div className='d-flex flex-column gap-10'>
@@ -80,31 +79,15 @@ class HomeHeader extends Component {
                         <div className='row'>
                             <div className='col-12'>
                                 <div className='menu-bottom d-flex align-items-center gap-30'>
-                                    <div>
-                                        <div className="dropdown">
-                                            <button className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center"
-                                                type="button"
-                                                id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                {/* <AiOutlineMenuUnfold className=' d-flex align-items-center gap-10 text-white' style={{ width: "30px", height: "30px" }} /> */}
-                                                <img src={menulogo} alt='' />
-                                                <span className='me-5 d-inline-block'>Phân loại sản phẩm</span>
-                                            </button>
-                                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><Link className="dropdown-item text-white" to="">Action</Link></li>
-                                                <li><Link className="dropdown-item text-white" to="">Another action</Link></li>
-                                                <li><Link className="dropdown-item text-white" to="">Something else here</Link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div className='menu-links'>
-                                        <div className='d-flex align-items-center gap-15'>
+                                        <div className='d-flex align-items-center gap-22'>
                                             <NavLink to='/'>Trang chủ</NavLink>
                                             <NavLink to='/products'>Sản phẩm</NavLink>
                                             <NavLink to='/about'>Về chúng tôi</NavLink>
                                             <NavLink to='/blog'>Blogs</NavLink>
                                             <NavLink to='/contact'>Liên hệ</NavLink>
+                                            <NavLink to='/policy'>Thông tin & Điều khoản</NavLink>
+                                            <a className='text-white' href='tel: 0978569372'>Liên hệ hotline : 0978569372</a>
                                         </div>
                                     </div>
                                 </div>

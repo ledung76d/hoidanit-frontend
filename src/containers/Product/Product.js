@@ -7,8 +7,10 @@ import './Product.scss'
 import HomeHeader from '../Homepage/HomeHeader';
 import Footer from '../Footer/Footer';
 import ReactStars from 'react-rating-stars-component';
+import ip14prm from "../../assets/images/ip14promax.jpg";
 
 class Product extends Component {
+
     render() {
         return (
             <>
@@ -84,28 +86,7 @@ class Product extends Component {
                                             </div>
                                         </div>
                                         <h5 className='sub-title'>Màu sắc:</h5>
-                                        <div>
-                                            <ul className='colors ps-0'>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
+
                                         <h5 className='sub-title'>Kích thước màn hình:</h5>
                                         <div>
                                             <div className='form-check'>
@@ -175,7 +156,7 @@ class Product extends Component {
                                         <div className='suggest-products mb-3 d-flex'>
                                             <div className='w-50'>
                                                 <img
-                                                    src='images/watch.jpg'
+                                                    src={ip14prm}
                                                     className='img-fluid'
                                                     alt='watch'
                                                 />
@@ -195,7 +176,7 @@ class Product extends Component {
                                         <div className='suggest-products d-flex'>
                                             <div className='w-50'>
                                                 <img
-                                                    src='images/watch.jpg'
+                                                    src={ip14prm}
                                                     className='img-fluid'
                                                     alt='watch'
                                                 />
@@ -235,20 +216,308 @@ class Product extends Component {
                                                 <option value="price-descending">Giá thấp đến cao</option>
                                             </select>
                                         </div>
-                                        {/* <div className="d-flex align-items-center gap-10">
-                                        <p className="total-product mb-0">21 Products</p>
-                                        <div className="d-flex gap-10 align-items-center grid">
-                                            <img onClick={() => { setGrid(3); }} src='images/gr4.svg' className='d-block img-fluid' alt='grid' />
-                                            <img onClick={() => { setGrid(4); }} src='images/gr3.svg' className='d-block img-fluid' alt='grid' />
-                                            <img onClick={() => { setGrid(6); }} src='images/gr2.svg' className='d-block img-fluid' alt='grid' />
-                                            <img onClick={() => { setGrid(12); }} src='images/gr.svg' className='d-block img-fluid' alt='grid' />
-                                        </div>
-                                    </div> */}
                                     </div>
                                 </div>
                                 <div className='list-product pb-5'>
                                     <div className='d-flex flex-wrap gap-10'>
-                                        {/* <ProductCard grid={grid} /> */}
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className={"col-3"}>
+                                            <Link to="/product/:id" className='product-card position-relative'>
+
+                                                <div className='product-image'>
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                    <img src={ip14prm} className='img-fluid' alt='product image' />
+                                                </div>
+
+                                                <div className='product-details'>
+                                                    <h6 className='brand'>
+                                                        Havels
+                                                    </h6>
+                                                    <h5 className='product-title'>
+                                                        Kids headphones bulk 10 packs multi colored for students
+                                                    </h5>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        value={4}
+                                                        edit={false}
+                                                        activeColor="#ffd700"
+                                                    />
+                                                    <p >
+                                                        Sản phẩm có trong mình một diện mạo bắt mắt nhờ lối tạo hình vuông vức bắt trend
+                                                        tương tự thế hệ iPhone 13 series, đây được xem là kiểu thiết kế rất thành công trên
+                                                        các thế hệ trước khi tạo nên cơn sốt toàn cầu về kiểu dáng điện thoại cho đến nay.
+                                                    </p>
+                                                    <p className='price'>
+                                                        5.000.000 VNĐ
+                                                    </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

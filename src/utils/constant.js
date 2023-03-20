@@ -7,7 +7,10 @@ export const path = {
     ABOUT: '/about',
     SIGNUP: '/signup',
     CONTACT: '/contact',
-    PRODUCT: '/products'
+    PRODUCT: '/products',
+    POLICY: '/policy',
+    CART: '/cart',
+    CHECKOUT: '/checkout'
 };
 
 export const languages = {

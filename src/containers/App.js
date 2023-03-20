@@ -24,6 +24,9 @@ import { CustomToastCloseButton } from '../components/CustomToast';
 import Signup from './Signup/Signup';
 import Contact from './Contact/Contact';
 import Product from './Product/Product';
+import Policy from './Policy/Policy';
+import Cart from './Cart/Cart';
+import Checkout from './Checkout/Checkout';
 // import ConfirmModal from '../components/ConfirmModal';
 
 class App extends Component {
@@ -51,7 +54,7 @@ class App extends Component {
             <Fragment>
                 <Router history={history}>
                     <div className="main-container">
-                        {/* <ConfirmModal /> */}
+
                         {this.props.isLoggedIn && <Header />}
 
                         <div className="content-container">
@@ -65,8 +68,10 @@ class App extends Component {
                                     <Route path={path.SIGNUP} component={Signup} />
                                     <Route path={path.CONTACT} component={Contact} />
                                     <Route path={path.PRODUCT} component={Product} />
-                                    {/* <Route path={path.HOMEPAGE} component={Homepage} />
-                                    <Route path={path.HOMEPAGE} component={Homepage} /> */}
+                                    <Route path={path.POLICY} component={Policy} />
+                                    <Route path={path.CART} component={Cart} />
+                                    <Route path={path.CHECKOUT} component={Checkout} />
+
                                 </Switch>
                             </CustomScrollbars>
                         </div>
