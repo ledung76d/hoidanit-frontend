@@ -16,9 +16,15 @@ import { Link } from 'react-router-dom'
 class Login extends Component {
     constructor(props) {
         super(props);
+        // this.state = {
+        //     username: '',
+        //     password: '',
+        //     isShowPassword: false,
+        //     errMessage: ''
+        // }
         this.state = {
-            username: '',
-            password: '',
+            userName: '',
+            passWord: '',
             isShowPassword: false,
             errMessage: ''
         }
@@ -26,13 +32,13 @@ class Login extends Component {
 
     handleOnChangeUsername = (event) => {
         this.setState({
-            username: event.target.value
+            userName: event.target.value
         })
         console.log(event.target.value)
     }
     handleOnChangePassword = (event) => {
         this.setState({
-            password: event.target.value
+            passWord: event.target.value
         })
         console.log(event.target.value)
     }
@@ -40,13 +46,13 @@ class Login extends Component {
         this.setState({
             errMessage: ''
         })
-        console.log('username: ', this.state.username, 'password: ', this.state.password)
+        console.log('username: ', this.state.userName, 'password: ', this.state.passWord)
         console.log('All state: ', this.state)
         try {
-            let data = await handleLoginApi(this.state.username, this.state.password)
+            let data = await handleLoginApi(this.state.userName, this.state.passWord)
             if (data && data.errCode !== 0) {
                 this.setState({
-                    errMessage: data.message
+                    errMessage: data.errMessage
                 })
             }
 
@@ -59,7 +65,7 @@ class Login extends Component {
             if (error.response) {
                 if (error.response.data) {
                     this.setState({
-                        errMessage: error.response.data.message
+                        errMessage: error.response.data.errMessage
                     })
                 }
             }

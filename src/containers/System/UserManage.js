@@ -5,7 +5,10 @@ import './UserManage.scss'
 import { getAllUsers, createNewUserService, deleteUserService, editUserService } from '../../services/userService'
 import ModalUser from './ModalUser';
 import ModalEditUser from './ModalEditUser';
+import ModalDeleteUser from './ModalDeleteUser';
 import { emitter } from '../../utils/emitter';
+import CustomScrollbars from '../../components/CustomScrollbars';
+
 class UserManage extends Component {
 
     constructor(props) {
@@ -14,7 +17,9 @@ class UserManage extends Component {
             arrUsers: [],
             isOpenModalUser: false,
             isOpenModalEditUser: false,
-            userEdit: {}
+            isOpenModalDeleteUser: false,
+            userEdit: {},
+            userDelete: {}
         }
     }
 
@@ -53,6 +58,12 @@ class UserManage extends Component {
         })
     }
 
+    toggleUserDeleteModal = () => {
+        this.setState({
+            isOpenModalDeleteUser: !this.state.isOpenModalDeleteUser,
+        })
+    }
+
     createNewUser = async (data) => {
         try {
             let res = await createNewUserService(data)
@@ -71,25 +82,19 @@ class UserManage extends Component {
             console.log(e)
         }
     }
-    handleDeleteUser = async (user) => {
-        console.log('click delete', user)
-        try {
-            let res = await deleteUserService(user.id)
-            if (res && res.errCode === 0) {
-                await this.getAllUsersFromReact()
-            }
-            else {
-                alert(res.errMessage)
-            }
-        } catch (e) {
-            console.log(e)
-        }
-    }
+
     handleEditUser = async (user) => {
         console.log("check edit user", user)
         this.setState({
             isOpenModalEditUser: true,
             userEdit: user
+        })
+    }
+    handleDeleteUser = async (user) => {
+        console.log("check delete user", user)
+        this.setState({
+            isOpenModalDeleteUser: true,
+            userDelete: user
         })
     }
 
@@ -109,10 +114,30 @@ class UserManage extends Component {
             console.log(e)
         }
     }
+    deleteUser = async (user) => {
+        console.log('click delete', user)
+        try {
+            let res = await deleteUserService(user.id)
+            // if (res && res.errCode === 0) {
+            if (res) {
+                this.setState({
+                    isOpenModalDeleteUser: false
+                })
+                await this.getAllUsersFromReact()
+            }
+            else {
+                alert(res.errMessage)
+            }
+        } catch (e) {
+            console.log(e)
+        }
+    }
     render() {
-        let arrUsers = this.state.arrUsers
+        let arrUsers = this.state.arrUsers[0]
+        // console.log(arrUsers)
         return (
             <div className="users-container">
+
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModal}
@@ -126,6 +151,14 @@ class UserManage extends Component {
                         editUser={this.doEditUser}
                     />
                 }
+                {this.state.isOpenModalDeleteUser &&
+                    <ModalDeleteUser
+                        isOpen={this.state.isOpenModalDeleteUser}
+                        toggleFromParent={this.toggleUserDeleteModal}
+                        deluser={this.state.userDelete}
+                        deleteuser={this.deleteUser}
+
+                    />}
                 <div className='title text-center'>Manage users with admin:</div>
                 <div className='mx1'>
                     <button
@@ -140,18 +173,24 @@ class UserManage extends Component {
                     <table id="customers">
                         <tbody>
                             <tr>
+                                <th>ID</th>
                                 <th>Email</th>
                                 <th>Firstname</th>
                                 <th>Lastname</th>
+                                <th>RoleId</th>
+                                <th>Phone</th>
                                 <th>Address</th>
                                 <th>Actions</th>
                             </tr>
                             {arrUsers && arrUsers.map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{item.email}</td>
+                                        <td>{item.id}</td>
+                                        <td>{item.userName}</td>
                                         <td>{item.firstName}</td>
                                         <td>{item.lastName}</td>
+                                        <td>{item.roleId}</td>
+                                        <td>{item.phone}</td>
                                         <td>{item.address}</td>
                                         <td>
                                             <button

@@ -260,6 +260,50 @@ class Slide extends Component {
                         </div>
                     </div>
                 </section>
+                <section className='home-wrapper-1 py-5'>
+                    <div className='container-xxl'>
+                        <div className='row'>
+                            <div className='col-6'>
+                                <div className='main-banner position-relative'>
+                                    <div>Các reviewers nói gì về cửa hàng VTmobile: </div>
+                                </div>
+                            </div>
+                            <div className='col-6'>
+                                <div className='d-flex flex-wrap gap-10 justify-content-between align-items-center'>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://www.mobiledokan.co/wp-content/uploads/2022/09/Apple-iPhone-14-series-come-with-some-revolutions-featured-image-780x470.jpg'
+                                            className='img-fluid rounded-3 mb-2 mt-4'
+                                            alt='main banner'
+                                        />
+                                    </div>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://images2.thanhnien.vn/Uploaded/nthanhluan/2022_03_15/3117-7706.jpg'
+                                            className='img-fluid rounded-3 mb-2 mt-4'
+                                            alt='main banner'
+                                        />
+                                    </div>
+                                    <div className='small-banner position-relative '>
+                                        <img
+                                            src='https://laptopdell.com.vn/wp-content/uploads/2022/09/Oppo-Reno-8.jpg'
+                                            className='img-fluid rounded-3 mt-3 mb-2'
+                                            alt='main banner'
+                                        />
+                                    </div>
+                                    <div className='small-banner position-relative mt-3 mb-2'>
+                                        <img
+                                            src='https://i.ytimg.com/vi/_ynwIfkO35Y/maxresdefault.jpg'
+                                            className='img-fluid rounded-3'
+                                            alt='main banner'
+                                        />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </>
         );
