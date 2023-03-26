@@ -23,10 +23,31 @@ const editUserService = (inputData) => {
     return axios.put(`/api/edit-user`, inputData)
 }
 
+const getAllProducts = (inputId) => {
+    return axios.get(`/api/get-all-products?id=${inputId}`)
+}
+
+const createNewProductService = (data) => {
+    console.log('Check data from services: ', data)
+    return axios.post(`/api/create-new-product`, data)
+}
+
+const deleteProductService = (productId) => {
+    return axios.delete(`/api/delete-product`, { data: { productId: productId } })
+}
+
+const editProductService = (inputData) => {
+    return axios.put(`/api/edit-product`, inputData)
+}
+
 export {
     handleLoginApi,
     getAllUsers,
     createNewUserService,
     deleteUserService,
-    editUserService
+    editUserService,
+    getAllProducts,
+    createNewProductService,
+    deleteProductService,
+    editProductService
 }
