@@ -50,6 +50,10 @@
   .gap-30{
     gap:30px
     }
+
+  .gap-70{
+    gap:70px;
+  }
   
     .button{
       background-color: var(--color-232f3e);
@@ -289,6 +293,7 @@
   
       /* Product card  */
       .product-card{
+        // gap: 30px;
         padding: 15px;
         background-color: #fff;
         border-radius: 15px;
@@ -771,4 +776,51 @@
   
   
 
-  
+  .btn-buy{
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    margin: 10px 0px;
+    height: 35px;
+    border-radius: 15px;
+    outline: none;
+    border:none;
+    background: black;
+    padding-top: 6px
+  } 
+  .btn-addcart{
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    margin: 10px 0px;
+    height: 35px;
+    border-radius: 15px;
+    outline: none;
+    border:none;
+    background: black;
+    padding-top: 6px
+  }
+
+  // .btn-buy, .btn-addcart{
+  //   background-color: var(--color-232f3e);
+  //   color:white;
+  //   font-size: 13px;
+  //   padding: 13px 33px;
+  //   border-radius: 15px;
+  //   width: 100%;
+  //   margin: 10px 0px;
+  //   height: 45px;
+  //   outline: none;
+  //   border:none;
+  //   background: black;
+  //   padding-top: 6px
+  // }
+
+  .btn-buy:hover{
+    background-color: var(--color-febd69);
+    color: var(--color-131921);
+  }
+   .btn-addcart:hover{
+    background-color: var(--color-febd69);
+    color: var(--color-131921);
+  }
