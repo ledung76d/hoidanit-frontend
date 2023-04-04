@@ -16,7 +16,6 @@ import Cart from './Cart/Cart';
 import Checkout from './Checkout/Checkout'; import Home from '../routes/Home';
 // import Login from '../routes/Login';
 import Login from './Auth/Login';
-import Header from './Header/Header';
 import System from '../routes/System';
 import Homepage from './Homepage/Homepage.js'
 import About from './About/About'
@@ -49,7 +48,7 @@ class App extends Component {
                     <Router history={history}>
                         <div className="main-container">
 
-                            {this.props.isLoggedIn && <Header />}
+                            {/* {this.props.isLoggedIn && <Header />} */}
 
                             <div className="content-container">
                                 <CustomScrollbars style={{ height: '100vh', width: '100%' }}>

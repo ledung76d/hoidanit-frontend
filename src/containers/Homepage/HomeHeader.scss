@@ -54,7 +54,9 @@
   .gap-30{
     gap:30px
     }
-
+.gap-50{
+  gap: 50px;
+}
     .button{
       background-color: var(--color-232f3e);
       color:white;
@@ -68,6 +70,12 @@
       color: var(--color-131921);
     }
   /* Header part */
+  .stable-header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
   .header-top-strip{
     border-bottom: 1px solid var(--color-3b4149);
     background-color: var(--color-131921);
@@ -75,6 +83,8 @@
   
   .header-upper{
     background-color: var(--color-131921);
+
+    
   
     .input-group-text{
       background-color: var(--color-febd69);

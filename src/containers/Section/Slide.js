@@ -25,7 +25,7 @@ import logoRealme from '../../assets/images/logoRealme.png'
 import logoSamsung from '../../assets/images/logoSamsung.jpg'
 import logoVivo from '../../assets/images/logoVivo.jpg'
 import logoXiaomi from '../../assets/images/logoXiaomi.jpg'
-
+import ReactPlayer from 'react-player/youtube'
 class Slide extends Component {
     render() {
         let settings = {
@@ -62,6 +62,41 @@ class Slide extends Component {
                                 <img src={slide3} />
                             </div>
                         </Slider>
+                    </div>
+                </section>
+                <section className='marque-wrapper py-5'>
+                    <div className='container-xxl'>
+                        <div className='row'>
+                            <div className='col-12'>
+                                <div className='marquee-inner-wrapper card-wrapper'>
+                                    <Marquee className='d-flex'>
+                                        <div className='mx-4 w-25'>
+                                            <img className='brand-css' src={logoApple} alt='brand' />
+                                        </div>
+
+                                        <div className='mx-4 w-25'>
+                                            <img className='brand-css' src={logoOppo} alt='brand' />
+                                        </div>
+
+                                        <div className='mx-4 w-25'>
+                                            <img className='brand-css' src={logoRealme} alt='brand' />
+                                        </div>
+
+                                        <div className='mx-4 w-25'>
+                                            <img className='brand-css' src={logoSamsung} alt='brand' />
+                                        </div>
+
+                                        <div className='mx-4 w-25'>
+                                            <img className='brand-css' src={logoVivo} alt='brand' />
+                                        </div>
+
+                                        <div className='mx-4 w-25'>
+                                            <img className='brand-css' src={logoXiaomi} alt='brand' />
+                                        </div>
+                                    </Marquee>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className='home-wrapper-1 py-5'>
@@ -112,6 +147,7 @@ class Slide extends Component {
                         </div>
                     </div>
                 </section>
+
                 <section className='home-wrapper-1 py-5'>
                     <div className='container-xxl'>
                         <div className='row'>
@@ -225,47 +261,28 @@ class Slide extends Component {
                         </div>
                     </div>
                 </section>
-                <section className='marque-wrapper py-5'>
-                    <div className='container-xxl'>
-                        <div className='row'>
-                            <div className='col-12'>
-                                <div className='marquee-inner-wrapper card-wrapper'>
-                                    <Marquee className='d-flex'>
-                                        <div className='mx-4 w-25'>
-                                            <img className='brand-css' src={logoApple} alt='brand' />
-                                        </div>
 
-                                        <div className='mx-4 w-25'>
-                                            <img className='brand-css' src={logoOppo} alt='brand' />
-                                        </div>
-
-                                        <div className='mx-4 w-25'>
-                                            <img className='brand-css' src={logoRealme} alt='brand' />
-                                        </div>
-
-                                        <div className='mx-4 w-25'>
-                                            <img className='brand-css' src={logoSamsung} alt='brand' />
-                                        </div>
-
-                                        <div className='mx-4 w-25'>
-                                            <img className='brand-css' src={logoVivo} alt='brand' />
-                                        </div>
-
-                                        <div className='mx-4 w-25'>
-                                            <img className='brand-css' src={logoXiaomi} alt='brand' />
-                                        </div>
-                                    </Marquee>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section className='home-wrapper-1 py-5'>
                     <div className='container-xxl'>
                         <div className='row'>
                             <div className='col-6'>
-                                <div className='main-banner position-relative'>
-                                    <div>Các reviewers nói gì về cửa hàng VTmobile: </div>
+                                <div className='main-banner '>
+                                    <div>
+                                        <h4>Top smartphone giá rẻ dưới 5 triệu tại của hàng:</h4></div>
+                                    {/* <iframe
+                                        src="https://www.youtube.com/watch?v=fE_DIbQuRGU&t=1s&pp=ygUacmV2aWV3IGN1YSBoYW5nIGRpZW4gdGhvYWk%3D"
+                                        title='Youtube video player'
+                                        allow='accelerometer; autoplay; clipboard-write; encrypted-media,gyroscope; picture-in-picture'
+                                        allowFullScreen
+                                    >
+                                    </iframe> */}
+                                    <ReactPlayer className='react-player'
+                                        url='https://www.youtube.com/watch?v=fE_DIbQuRGU&t=1s&ab_channel=AnhEmTV'
+                                        width='100%'
+                                        height='300px'
+
+                                    />
+
                                 </div>
                             </div>
                             <div className='col-6'>
