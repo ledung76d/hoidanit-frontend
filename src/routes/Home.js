@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 class Home extends Component {
 
     render() {
-        const { isLoggedIn } = this.props;
+        const { isLoggedIn, userInfo } = this.props;
         // let linkToRedirect = isLoggedIn ? '/system/user-manage' : '/login';
-        let linkToRedirect = isLoggedIn ? '/system/user-manage' : '/home';
-
+        let linkToRedirect1 = '/home'
+        let linkToRedirect2 = '/system/user-manage'
         return (
-            <Redirect to={linkToRedirect} />
+            <Redirect to={isLoggedIn && userInfo.roleId === 1 ? linkToRedirect2 : linkToRedirect1} />
         );
     }
 
@@ -18,7 +18,8 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo
     };
 };
 

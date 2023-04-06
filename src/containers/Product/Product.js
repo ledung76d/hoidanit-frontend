@@ -31,7 +31,7 @@ const Product = () => {
     return (
         <>
             <HomeHeader></HomeHeader>
-            <Meta title={"Liên hệ VT mobile"} />
+            <Meta title={"Sản phẩm"} />
             <div className='product-wrapper home-wrapper-2 py-5'>
                 <div className='container-xxl'>
                     <div className='row'>
@@ -243,8 +243,8 @@ const Product = () => {
                                                 <Link to="/product/:id" className='product-card position-relative'>
 
                                                     <div className='product-image'>
-                                                        <img src={item.img} className='img-fluid' alt='product image' />
-                                                        <img src={item.img} className='img-fluid' alt='product image' />
+                                                        <img src={item.img1} className='img-fluid' alt='product image' />
+                                                        <img src={item.img2} className='img-fluid' alt='product image' />
                                                     </div>
 
                                                     <div className='product-details'>

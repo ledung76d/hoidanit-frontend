@@ -14,8 +14,8 @@ import '../Homepage/HomeHeader.scss'
 class Header extends Component {
 
     render() {
-        const { processLogout } = this.props;
-
+        const { processLogout, userInfo } = this.props;
+        console.log('check userInfor', userInfo)
         return (
             // <div className="header-container">
             //     {/* thanh navigator */}
@@ -40,7 +40,7 @@ class Header extends Component {
                                 </h3>
                             </div> */}
                             <div className='col-12'>
-                                <div className='header-upper-links d-flex align-items-center justify-content-between gap-100'>
+                                <div className='header-upper-links d-flex align-items-center justify-content-between gap-30'>
                                     <div>
                                         <Link className='d-flex align-items-centertext-white' to='/home'>
                                             <p className='mb-0'>
@@ -84,13 +84,15 @@ class Header extends Component {
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link to="/" className='d-flex align-items-center  text-white'>
-                                            <HiOutlineLogout className=' d-flex align-items-center text-white' style={{ width: "50px", height: "50px" }} onClick={processLogout} />
-                                            <p className='mb-0'>
-                                                <span className='text-white '>Đăng xuất</span>
-                                                <br />
-                                            </p>
+                                        <p className='mb-0'>
+                                            <span className='text-white' >Welcome, {userInfo && userInfo.lastName ? userInfo.lastName : ''}</span>
+                                            <br />
+                                        </p>
 
+                                    </div>
+                                    <div>
+                                        <Link to="/" className='d-flex align-items-center  text-white'>
+                                            <HiOutlineLogout className=' d-flex align-items-center text-white' style={{ width: "40px", height: "40px" }} onClick={processLogout} />
                                         </Link>
                                     </div>
                                 </div>
@@ -106,7 +108,9 @@ class Header extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo
+
     };
 };
 

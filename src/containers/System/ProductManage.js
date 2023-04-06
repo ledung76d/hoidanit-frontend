@@ -170,13 +170,12 @@ class ProductManage extends Component {
                             <tr>
                                 <th>Product ID</th>
                                 <th>Product name</th>
+                                <th>Brand</th>
                                 <th>Color</th>
                                 <th>Storage</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
                                 <th>Discount</th>
-                                <th>Image</th>
-                                <th>Content</th>
                                 <th>Actions</th>
                             </tr>
                             {arrProducts && arrProducts.map((item, index) => {
@@ -184,13 +183,12 @@ class ProductManage extends Component {
                                     <tr key={index}>
                                         <td>{item.productId}</td>
                                         <td>{item.productName}</td>
+                                        <td>{item.categoryId}</td>
                                         <td>{item.color}</td>
                                         <td>{item.storage}</td>
                                         <td>{item.price}</td>
                                         <td>{item.quantity}</td>
                                         <td>{item.discount}</td>
-                                        <td>{item.img}</td>
-                                        <td>{item.content}</td>
                                         <td>
                                             <button
                                                 className='btn-edit'

@@ -18,7 +18,7 @@ import service2 from '../../assets/images/service-02.png'
 import service3 from '../../assets/images/service-03.png'
 import service4 from '../../assets/images/service-04.png'
 import service5 from '../../assets/images/service-05.png'
-import brand01 from '../../assets/images/appletran.png'
+// import brand01 from '../../assets/images/appletran.png'
 import logoApple from '../../assets/images/logoIphone.jpg'
 import logoOppo from '../../assets/images/logoOppo.jpg'
 import logoRealme from '../../assets/images/logoRealme.png'
@@ -269,19 +269,13 @@ class Slide extends Component {
                                 <div className='main-banner '>
                                     <div>
                                         <h4>Top smartphone giá rẻ dưới 5 triệu tại của hàng:</h4></div>
-                                    {/* <iframe
-                                        src="https://www.youtube.com/watch?v=fE_DIbQuRGU&t=1s&pp=ygUacmV2aWV3IGN1YSBoYW5nIGRpZW4gdGhvYWk%3D"
-                                        title='Youtube video player'
-                                        allow='accelerometer; autoplay; clipboard-write; encrypted-media,gyroscope; picture-in-picture'
-                                        allowFullScreen
-                                    >
-                                    </iframe> */}
-                                    <ReactPlayer className='react-player'
+
+                                    {/* <ReactPlayer className='react-player'
                                         url='https://www.youtube.com/watch?v=fE_DIbQuRGU&t=1s&ab_channel=AnhEmTV'
                                         width='100%'
                                         height='300px'
 
-                                    />
+                                    /> */}
 
                                 </div>
                             </div>
